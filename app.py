@@ -1,6 +1,8 @@
 from flask import Flask, jsonify
+import database
 
 app = Flask(__name__)
+database.init_app(app)
 
 @app.route("/")
 def main_page():
