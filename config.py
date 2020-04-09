@@ -15,5 +15,5 @@ class ProductionConfig(Config):
 
 class DevelopmentConfig(Config):
     ENV="development"
-    DEVELOPMENT = True
-    SQLALCHEMY_DATABASE_URI = 'sqlite:///loca_database.db'
+    DEBUG = True
+    SQLALCHEMY_DATABASE_URI = 'sqlite:///local_database.db'

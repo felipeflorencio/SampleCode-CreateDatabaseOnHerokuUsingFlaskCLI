@@ -1,6 +1,7 @@
 import os
 from flask import Flask, jsonify
 import database
+import commands
 
 # init flask app instance
 app = Flask(__name__)
@@ -9,6 +10,7 @@ app.config.from_object(os.environ['APP_SETTINGS'])
 
 # setup all our dependencies, for now only database using application factory pattern
 database.init_app(app)
+commands.init_app(app)
 
 @app.route("/")
 def main_page():
